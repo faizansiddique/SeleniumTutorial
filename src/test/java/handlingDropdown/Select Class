@@ -1,0 +1,32 @@
+In HTML, the dropdowns are generally implemented either using the <select> tag or the <input> tag.
+
+To select a value from dropdown in Selenium
+1) selectByIndex
+2) selectByValue
+3) selectByVisibleText
+
+How to get options from a dropdown in Selenium?
+1) getOptions()
+This method returns all the options of the dropdown as a list of WebElement
+2) getFirstSelectedOptions()
+This method returns the first selected option of the dropdown. 
+If it is a single-select dropdown, this method will return the selected value of the dropdown, 
+and if it is a multi-select dropdown, this method will return the first selected value of the dropdown.
+3) getSelectedOptions()
+This method returns all the selected options of the dropdown. If it is a single-select dropdown, 
+this method will return the only selected value of the dropdown, and if it is a multi-select dropdown, 
+this method will return all the selected values of the dropdown.
+
+How to deselect a value from a dropdown in Selenium?
+1) deSelectAll()
+This method will clear all the selected entries of the dropdown.
+2) deSelectByIndex()
+Similar to the selectByIndex() method, the Select class also provides the method to deselect an option 
+from the dropdown using the deselectByIndex() method.
+3) deSelectByValue()
+Similar to the selectByValue() method, the Select class also provides the method to deselect an option 
+from the dropdown using the deselectByValue() method
+4) deSelectByVisibleText()
+Similar to the selectByVisibleText() method, the Select class also provides the method to deselect an 
+option from the dropdown using the deselectByVisibleText() method.
+ 

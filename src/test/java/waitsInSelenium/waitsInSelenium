@@ -1,0 +1,69 @@
+Explicit Wait:-
+- Explicit waits allow you to wait for certain condition to occur(Expected Conditions) or 
+maximum time exceeded before throwing “ElementNotVisibleException” exception. 
+- It is an intelligent kind of wait, but it can be applied only for specified elements.
+- It gives better options than implicit wait as it waits for dynamically loaded Ajax elements.
+
+
+Syntax:
+WebDriverWait wait = new WebDriverWait(WebDriverRefrence,TimeOut);
+
+The following are the Expected Conditions that can be used in Selenium Explicit Wait
+
+alertIsPresent()
+elementSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+frameToBeAvaliableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementsLocatedBy()
+presenceOfElementLocated()
+textToBePresentInElement()
+textToBePresentInElementLocated()
+textToBePresentInElementValue()
+titleIs()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+Implicit Wait:-
+- The Implicit Wait in Selenium is used to tell the web driver to wait for a certain amount of time before 
+it throws a “No Such Element Exception”. The default setting is 0.
+- Once we set the time, the web driver will wait for the element for that time before throwing an exception.
+- Selenium Web Driver has borrowed the idea of implicit waits from Watir.
+- Warning: Do not mix implicit and explicit waits. Doing so can cause unpredictable wait times.
+For example, setting an implicit wait of 10 seconds and an explicit wait of 15 seconds could cause a 
+timeout to occur after 20 seconds.
+
+Fluent Wait:-
+FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency 
+with which to check the condition.
+
+Fluent Wait syntax:
+Wait wait = new FluentWait(WebDriver reference)
+.withTimeout(timeout, SECONDS)
+.pollingEvery(timeout, SECONDS)
+.ignoring(Exception.class);
+
+Above code is deprecated in Selenium v3.11 and above. You need to use
+
+Wait wait = new FluentWait(WebDriver reference)
+.withTimeout(Duration.ofSeconds(SECONDS))
+.pollingEvery(Duration.ofSeconds(SECONDS))
+.ignoring(Exception.class);
+
+
+
+
+
+
+
+
+
+
+
+
+
